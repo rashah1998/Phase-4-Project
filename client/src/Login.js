@@ -1,7 +1,7 @@
 import {useState} from "react"
 
-function Login(){
-    const [userName, setUserName] = useState("")
+function Login({setUser, setIsAuthenticated}){
+    const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
     const [error, setError] = useState(null)
@@ -10,27 +10,26 @@ function Login(){
         e.preventDefault();
 
         const user = {
-            userName,
+            username,
             password 
         }
         
-        fetch("http://localhost:3000/login",{
+        fetch("/login",{
             method:"POST",
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify(user)
         })
         .then(res => {
+            console.log(res)
             if(res.ok) {
                 res.json()
                 .then(user => {
                     setUser(user)
                     setIsAuthenticated(true)
-                    console.log('Logged in!')
                 })
             } else {
                 res.json()
-                .then(json => {setError(json.error)
-                console.log('login error!')})
+                .then(json => {setError(json.error)})
             }
         })
 
@@ -39,16 +38,18 @@ function Login(){
     }
 
     return(
-        <div class="login_box">
+        <div className="login_box">
             <h1>Login Here</h1>
                 <form onSubmit={submitHandler}>
                     <div>
                     <p>Username</p>
-                    <input type="text" name="userName" placeholder="Enter Username" onChange={e => setUserName(e.target.value)}></input>
+                    <input type="text" name="username" placeholder="Enter Username" onChange={e => setUsername(e.target.value)}></input>
                     <p>Password</p>
                     <input type="password" name="password" placeholder="Enter Password" onChange={e => setPassword(e.target.value)}></input>
                     <br></br>
                     <input type="submit" name="" value="Login"></input>
+                    <br/>
+                    {error ? <p>{error}</p> : null}
                     </div>
                 </form>
         </div>

@@ -1,7 +1,7 @@
 class ComediansController < ApplicationController
 
-    def show 
+    def index
         render json: Comedian.all
     end
-    
+
 end

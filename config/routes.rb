@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :comedians
   resources :users
 
-  get '/authorized_user', to 'users#show'
+  get '/authorized_user', to: 'users#show'
 
   post '/login', to: 'sessions#login'
   delete '/logout', to: 'sessions#logout'
