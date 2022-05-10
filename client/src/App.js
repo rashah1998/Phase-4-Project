@@ -5,8 +5,13 @@ import { BrowserRouter as Router,Switch,Route, Routes } from "react-router-dom"
 import Locations from "./Locations"
 import Login from "./Login"
 import Comedians from "./Comedians"
+import {useState} from "react"
 
 function App() {
+ 
+  const [user, setUser] = useState(null)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  
   return (
     <Router>
     <div className="App">
