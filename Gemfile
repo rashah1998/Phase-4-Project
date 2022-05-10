@@ -16,11 +16,7 @@ gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-<<<<<<< HEAD
-#faker
-=======
 #Faker gem for generating seed data
->>>>>>> f3d47bf4023c7b6700e7de934f4bae1e6bd420a9
 gem 'faker'
 
 # Use Active Storage variant
