@@ -19,7 +19,7 @@ return (
                 <span> Home </span>
             </Link>
             <Link to="/Locations" className="nav-link">
-                <span> Locations </span>
+                <span> Venues </span>
             </Link>
             <Link to="/Comedians" className="nav-link">
                 <span> Comedians </span>

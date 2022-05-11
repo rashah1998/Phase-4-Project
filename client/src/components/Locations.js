@@ -1,12 +1,22 @@
+import {useEffect, useState} from 'react'
+import LocationItem from './LocationItem'
+
 function Locations(){
+
+    const [locations, setLocations] = useState([])
+
+    useEffect(() => {
+        fetch('/locations')
+        .then(res => res.json())
+        .then(locationData => setLocations(locationData))
+    },[])
+
+    const renderLocations = locations.map(location => <LocationItem key={location.id} location={location}/>)
+
     return(
         <div>
-        <h1>Name</h1>
-        <h2>City</h2>
-        <h3>State</h3>
-        <h4>number of seats</h4>
-        <h5>website Url</h5>
-        <h6>location url google maps link</h6>
+            <h1>Venues</h1>
+            {renderLocations}
         </div>
     )
 }
