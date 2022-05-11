@@ -1,6 +1,30 @@
 .show-item {
     color: white;
     text-align: left;
-    margin-left: 5%;
+    margin: 5%;
     border: 1px white;
+    box-shadow: inset 0 0 0 1000px rgba(31, 26, 26, 0.808);
+}
+
+.comedian-name {
+    color: white;
+    font-size: 40px;
+    
+}
+
+.date_time {
+    color: white;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.location{
+    color: white;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.img-comedian{
+    max-width: 25%;
+    max-height: 25%;
 }
