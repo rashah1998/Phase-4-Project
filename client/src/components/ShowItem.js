@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import "../styles/ShowItem.css"
 
 function ShowItem({show}){
@@ -5,8 +6,7 @@ function ShowItem({show}){
 
     return(
         <div className="show-item">
-            <h1 className="comedian-name">{comedian.name}</h1>
-            <img className="img-comedian" src={comedian.image_url}></img>
+            <Link to={`/Comedians/${comedian.id}`}><h1 className="comedian-name">{comedian.name}</h1></Link>
             <p className="date_time">Date: {date_time}</p>
             <p className="location">Location: {location.name} - {location.city}, {location.state}</p>
             <br></br>

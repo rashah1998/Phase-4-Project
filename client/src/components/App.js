@@ -6,6 +6,7 @@ import Locations from "./Locations"
 import Login from "./Login"
 import Comedians from "./Comedians"
 import Shows from "./Shows"
+import ComedianPage from './ComedianPage';
 import {useEffect, useState} from "react"
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Nav isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} setUser={setUser}/>
+      <Nav isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} setUser={setUser} user={user}/>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -54,11 +55,14 @@ function App() {
         <Route path="/Locations">
           <Locations />
         </Route>
-        <Route path="/Comedians">
+        <Route exact path="/Comedians">
           <Comedians comedians={comedians}/>
         </Route>
+        <Route path="/Comedians/:id">
+          <ComedianPage />
+        </Route>
         <Route path="/Login">
-          <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated}/>
+          <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} user={user}/>
         </Route>
       </Switch>
     </div>

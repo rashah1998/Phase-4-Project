@@ -1,8 +1,10 @@
 import {useState} from "react"
+import {useHistory} from "react-router-dom"
 
-function Login({setUser, setIsAuthenticated}){
+function Login({setUser, setIsAuthenticated, isAuthenticated, user}){
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const history = useHistory();
 
     const [error, setError] = useState(null)
 
@@ -20,12 +22,12 @@ function Login({setUser, setIsAuthenticated}){
             body: JSON.stringify(user)
         })
         .then(res => {
-            console.log(res)
             if(res.ok) {
                 res.json()
                 .then(user => {
                     setUser(user)
                     setIsAuthenticated(true)
+                    history.push("/")
                 })
             } else {
                 res.json()
@@ -42,14 +44,15 @@ function Login({setUser, setIsAuthenticated}){
             <h1>Login Here</h1>
                 <form onSubmit={submitHandler}>
                     <div>
-                    <p>Username</p>
-                    <input type="text" name="username" placeholder="Enter Username" onChange={e => setUsername(e.target.value)}></input>
-                    <p>Password</p>
-                    <input type="password" name="password" placeholder="Enter Password" onChange={e => setPassword(e.target.value)}></input>
-                    <br></br>
-                    <input type="submit" name="" value="Login"></input>
-                    <br/>
-                    {error ? <p>{error}</p> : null}
+                        <p>Username</p>
+                        <input type="text" name="username" placeholder="Enter Username" onChange={e => setUsername(e.target.value)}></input>
+                        <p>Password</p>
+                        <input type="password" name="password" placeholder="Enter Password" onChange={e => setPassword(e.target.value)}></input>
+                        <br></br>
+                        <input type="submit" name="" value="Login"></input>
+                        <br/>
+                        {error ? <p>{error}</p> : null}
+                        {user ? <p>Login successful! Welcome, {user.first_name}</p> : null}
                     </div>
                 </form>
         </div>

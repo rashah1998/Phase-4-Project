@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from "react-router-dom"
 import "../styles/Nav.css";
 
-function Nav({setIsAuthenticated, isAuthenticated, setUser}){
+function Nav({setIsAuthenticated, isAuthenticated, setUser, user}){
 
     function handleClick() {
         fetch('/logout', {method: 'DELETE'})
@@ -24,9 +24,9 @@ return (
             <Link to="/Comedians" className="nav-link">
                 <span> Comedians </span>
             </Link>
-            {isAuthenticated ? 
-            <Link to="/" className="nav-link" onClick={handleClick}>
-                <span> Log Out </span>
+            {user ? 
+            <Link to="/" className="nav-link" id="logout" onClick={handleClick}>
+                <span> {`Welcome, ${user.first_name}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log Out</span>
             </Link> :
             <Link to='/Login' className="nav-link" id="login">
                 <span> Login </span>
