@@ -4,4 +4,9 @@ class ComediansController < ApplicationController
         render json: Comedian.all
     end
 
+    def show
+        comedian = Comedian.find(params[:id])
+        render json: comedian, serializer: ComedianWithShowsSerializer
+    end
+
 end

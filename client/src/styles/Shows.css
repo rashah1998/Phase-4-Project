@@ -8,7 +8,7 @@
     padding: 0;
     align-items: center;
     flex-direction: column;
-    
+    background-color: black;
 }
 
 #downBtn {
@@ -18,7 +18,7 @@
     font-weight: bolder;
     border-color: rgb(255, 94, 0, 0);
     background-color: rgb(22, 22, 22);
-    color: rgb(100, 16, 168);
+    color: white;
     font-size: xx-large;
     transition: 0.3s;
     align-items: center;
@@ -26,7 +26,7 @@
 }
 
 #btnWrapper {
-    background-color: rgb(100, 16, 168);
+    background-color: white;
     height: 5rem;
     width: 5rem;
     display: flex;
@@ -38,25 +38,17 @@
 }
 
 #downBtn:hover {
-    border-color: rgb(100, 16, 168);
+    border-color: white;
     cursor: pointer;
     transform: scale(150%);
   }
   
   #showTitle {
-      border-bottom: 1px solid rgb(100, 16, 168);
+      border-bottom: 1px solid white;
       width: 100%;
-      margin-top: 5vh;
+      margin-top: 0;
       font-size: 35px;
     color: white
-}
-
-.gameWrapper {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 .container {
@@ -64,4 +56,8 @@
     background-color: rgb(15, 15, 15, 0.8);
     border-radius: 10px;
     border-top-left-radius: 0;
+}
+
+.shows-wrapper {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,1)
 }

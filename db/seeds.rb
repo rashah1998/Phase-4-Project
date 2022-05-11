@@ -16,7 +16,7 @@ l5 = Location.create(name: 'PNC Bank Arts Center', city: 'Holmdel', state: 'NJ',
 
 puts 'Creating Shows...'
 10.times do
-    Show.create(date_time: Faker::Date.between(from: '2022-06-01', to: '2021-10-31'), price: rand(6..15)*10, comedian_id: rand(1..Comedian.count), location_id: rand(1..Location.count)) 
+    Show.create(date_time: Faker::Date.between(from: '2021-06-01', to: '2021-10-31'), price: rand(6..15)*10, comedian_id: rand(1..Comedian.count), location_id: rand(1..Location.count)) 
 end
 
 puts 'Creating Users...'
