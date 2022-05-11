@@ -28,3 +28,15 @@ video {
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+
+
+
+@keyframes side {
+    0%,
+    100% {
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(-25vw);
+    }
+  }
