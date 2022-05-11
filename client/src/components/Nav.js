@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
+import "../styles/Nav.css";
 
 function Nav({setIsAuthenticated, isAuthenticated, setUser}){
 
@@ -14,21 +15,21 @@ function Nav({setIsAuthenticated, isAuthenticated, setUser}){
 return (
     <div>
         <nav>
-            <Link to="/">
-                <span className="nav_link"> Home </span>
+            <Link to="/" className="nav-link" >
+                <span> Home </span>
             </Link>
-            <Link to="/Locations">
-                <span className="nav_link"> Locations </span>
+            <Link to="/Locations" className="nav-link">
+                <span> Locations </span>
             </Link>
-            <Link to="/Comedians">
-                <span className="nav_link"> Comedians </span>
+            <Link to="/Comedians" className="nav-link">
+                <span> Comedians </span>
             </Link>
             {isAuthenticated ? 
-            <Link to="/" onClick={handleClick}>
-                <span className="nav_link"> Log Out </span>
+            <Link to="/" className="nav-link" onClick={handleClick}>
+                <span> Log Out </span>
             </Link> :
-            <Link to='/Login'>
-                <span className="nav_link"> Login </span>
+            <Link to='/Login' className="nav-link" id="login">
+                <span> Login </span>
             </Link>
             }
         </nav>
