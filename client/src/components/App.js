@@ -30,6 +30,18 @@ function App() {
     .then(showData => setShows(showData))
   }, []);
   
+  const [comedians, setComedians] = useState([])
+    
+
+
+  useEffect(() => {
+      fetch("/comedians")
+          .then((r) => r.json())
+          .then((comedian) => {
+          setComedians(comedian);
+          });
+  }, []);
+
   return (
     <Router>
     <div className="App">
@@ -43,7 +55,7 @@ function App() {
           <Locations />
         </Route>
         <Route path="/Comedians">
-          <Comedians />
+          <Comedians comedians={comedians}/>
         </Route>
         <Route path="/Login">
           <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated}/>
