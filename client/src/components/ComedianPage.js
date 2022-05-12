@@ -15,7 +15,7 @@ function ComedianPage() {
         })
     }, [])
 
-    const renderShows = comedianShows.map(show => <ComedianPageShow show={show}/>)
+    const renderShows = comedianShows.map(show => <ComedianPageShow key={show.id} show={show}/>)
 
     return(
         <div>

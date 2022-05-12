@@ -16,12 +16,18 @@ nav {
     text-decoration: underline;
 }
 
+#welcome {
+    color: white;
+    font-size: 20px;
+}
+
 #login {
     justify-self: end;
     margin-right: 10%;
 }
 
-#logout {
+#logged-in {
     justify-self: end;
+    width: 290px;
     margin-right: 10%;
 }

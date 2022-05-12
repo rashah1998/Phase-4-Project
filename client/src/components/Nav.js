@@ -24,12 +24,16 @@ return (
             <Link to="/Comedians" className="nav-link">
                 <span> Comedians </span>
             </Link>
-            {user ? 
-            <Link to="/" className="nav-link" id="logout" onClick={handleClick}>
-                <span> {`Welcome, ${user.first_name}`}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log Out</span>
-            </Link> :
+            {user ?
+            <div id='logged-in'> 
+                <span id='welcome'>Welcome, {user.first_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <Link to="/" className="nav-link" id="logout" onClick={handleClick}>
+                    <span>Log Out</span>
+                </Link> 
+            </div>
+            :
             <Link to='/Login' className="nav-link" id="login">
-                <span> Login </span>
+                <span> Log In </span>
             </Link>
             }
         </nav>

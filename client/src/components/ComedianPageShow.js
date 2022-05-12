@@ -4,7 +4,7 @@ function ComedianPageShow({show}) {
         <div>
             <p>Date: {show.date_time}</p>
             <p>Venue: {show.location.name} - {show.location.city}, {show.location.state}</p>
-            <p>Price: ${show.price}</p>
+            <p>Ticket Price: ${show.price}</p>
         </div>
     )
 }

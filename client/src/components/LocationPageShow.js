@@ -4,7 +4,7 @@ function LocationPageShow({show}) {
         <div>
             <p>Date: {show.date_time}</p>
             <p>Comedian: {show.comedian.name}</p>
-            <p>Price: ${show.price}</p>
+            <p>Ticket Price: ${show.price}</p>
         </div>
     )
 }

@@ -15,7 +15,7 @@ function LocationPage() {
         })
     }, [])
 
-    const renderShows = locationShows.map(show => <LocationPageShow show={show}/>)
+    const renderShows = locationShows.map(show => <LocationPageShow key={show.id} show={show}/>)
 
     // id, name, city, state, number_of_seats, website_url, image_url, shows
 

@@ -51,7 +51,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
-          <Shows shows={shows}/>
+          <Shows shows={shows} user={user}/>
         </Route>
         <Route exact path="/Venues">
           <Locations />
@@ -69,6 +69,8 @@ function App() {
           <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} user={user}/>
         </Route>
       </Switch>
+      <div id='footer'>
+      </div>
     </div>
     </Router>
   );
