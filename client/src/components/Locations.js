@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import LocationItem from './LocationItem'
+import '../styles/Locations.css'
 
 function Locations(){
 
@@ -15,7 +16,7 @@ function Locations(){
 
     return(
         <div>
-            <h1>Venues</h1>
+            <h1 id='locations-page-title'>Venues</h1>
             {renderLocations}
         </div>
     )

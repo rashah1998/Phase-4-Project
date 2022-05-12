@@ -13,7 +13,7 @@ function Nav({setIsAuthenticated, isAuthenticated, setUser, user}){
     }
 
 return (
-    <div>
+    <div >
         <nav>
             <Link to="/" className="nav-link" >
                 <span> Home </span>
