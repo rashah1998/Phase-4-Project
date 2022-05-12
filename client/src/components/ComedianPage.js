@@ -1,6 +1,7 @@
 import {useParams} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import ComedianPageShow  from './ComedianPageShow';
+import "../styles/ComedianPage.css"
 
 function ComedianPage() {
     const {id} = useParams();
@@ -18,15 +19,16 @@ function ComedianPage() {
     const renderShows = comedianShows.map(show => <ComedianPageShow key={show.id} show={show}/>)
 
     return(
-        <div>
-            <h1>{comedian.name}</h1>
-            <p>{comedian.about_info}</p>
-            <img src={comedian.image_url} ></img>
-            <br></br>
-            <a href={comedian.website_url}>{comedian.name}'s Website</a>
-            <div>
-                <h1>{comedian.name}'s Upcoming Shows:</h1>
-                {renderShows}
+        <div className='background'>
+            <div className='comedian-page'>
+                <img src={comedian.image_url} ></img>
+                <h1>{comedian.name}</h1>
+                <p>{comedian.about_info}</p>
+                <a href={comedian.website_url}>{comedian.name}'s Website</a>
+            </div>
+            <div className='upcoming-show'>
+                    <h1>{comedian.name}'s Upcoming Shows:</h1>
+                    {renderShows}
             </div>
         </div>
     )

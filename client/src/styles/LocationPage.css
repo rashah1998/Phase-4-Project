@@ -1,0 +1,45 @@
+.location-page {
+    margin: 20px 20px  0;  
+    border: 5px solid #333;
+    overflow: auto;
+}
+
+.location-page > h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin: center;
+}
+
+.location-page > p {
+    margin-left: 210px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.location-page > img{
+    float: left;
+    height: 500px;
+    width: 700px
+}
+
+.render-show{
+    color: white;
+    text-align: left;
+    margin-left: 600px;
+    margin-right: 600px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.808);
+    text-indent: 35px;
+}
+
+.upcoming-show{
+    color:white;
+    /* padding-bottom: 20%; */
+}
+.location-page > a{
+    color: White;
+}
+
+/* .what{
+    padding:12%
+} */
