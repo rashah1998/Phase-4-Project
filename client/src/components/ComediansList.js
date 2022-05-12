@@ -6,9 +6,9 @@ function ComediansList({comedian}){
 
     return(
         <div className="comedians-list">
-            <h1>{comedian.name}</h1>
-            <p>{comedian.about_info}</p>
-            <img src={comedian.image_url}></img>
+            <h1>{name}</h1>
+            <p>{about_info}</p>
+            <img src={image_url}></img>
             <br></br>
             <Link to={`/Comedians/${id}`}><p>Read More</p></Link>
         </div>

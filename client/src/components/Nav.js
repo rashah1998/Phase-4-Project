@@ -18,7 +18,7 @@ return (
             <Link to="/" className="nav-link" >
                 <span> Home </span>
             </Link>
-            <Link to="/Locations" className="nav-link">
+            <Link to="/Venues" className="nav-link">
                 <span> Venues </span>
             </Link>
             <Link to="/Comedians" className="nav-link">

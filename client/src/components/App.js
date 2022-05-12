@@ -8,6 +8,7 @@ import Comedians from "./Comedians"
 import Shows from "./Shows"
 import ComedianPage from './ComedianPage';
 import {useEffect, useState} from "react"
+import LocationPage from './LocationPage';
 
 function App() {
  
@@ -52,8 +53,11 @@ function App() {
           <Home />
           <Shows shows={shows}/>
         </Route>
-        <Route path="/Locations">
+        <Route exact path="/Venues">
           <Locations />
+        </Route>
+        <Route path="/Venues/:id">
+          <LocationPage />
         </Route>
         <Route exact path="/Comedians">
           <Comedians comedians={comedians}/>
