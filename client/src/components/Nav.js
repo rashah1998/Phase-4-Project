@@ -27,14 +27,24 @@ return (
             {user ?
             <div id='logged-in'> 
                 <span id='welcome'>Welcome, {user.first_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <Link to= '/Tickets'className="nav-link" id="my-tickets">
+                    <span>My Tickets</span>
+                </Link>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <Link to="/" className="nav-link" id="logout" onClick={handleClick}>
                     <span>Log Out</span>
                 </Link> 
             </div>
             :
-            <Link to='/Login' className="nav-link" id="login">
-                <span> Log In </span>
-            </Link>
+            <div id='logged-out'>
+                <Link to='/Login' className="nav-link" id="login">
+                    <span>Log In</span>
+                </Link>
+                <p id='or'>&nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;</p>
+                <Link to='/Signup' className="nav-link" id="signup">
+                    <span>Sign Up</span>
+                </Link>
+            </div>
             }
         </nav>
     </div>

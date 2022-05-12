@@ -1,5 +1,9 @@
-function Ticket(){
-    // location.seatAvaibale - Tickets Already brought = remaining tickets (math being used )
+import {useEffect} from 'react-router-dom'
+
+function Tickets(){
+    // useEffect(() => {
+    //     null;
+    // },[])
     return(
 
         <div>
@@ -7,3 +11,5 @@ function Ticket(){
         </div>
     )
 }
+
+export default Tickets

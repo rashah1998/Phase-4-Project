@@ -1,13 +1,22 @@
 class UsersController < ApplicationController
 
-    def show 
+    def show
         current_user = User.find(session[:current_user])
         render json: current_user
     end
 
+    def show_tickets
+        user = User.find(params[:id])
+        render json: user.shows
+    end
+
     def create
-        user = User.create!(user_params)
-        render json: user, status: :created
+        if User.exists?(username: params[:username])
+            render json: {error: 'Username not available. Try a different username.'}, status: :not_acceptable 
+        else
+            user = User.create!(user_params)
+            render json: user, status: :created
+        end
     end
 
     private

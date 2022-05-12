@@ -24,7 +24,7 @@ function ShowItem({show, user}){
             <p className="date_time">Date: {date_time}</p>
             <p className="location">Venue: </p><Link to={`/Venues/${location.id}`} className="home-show-links"><p className="location">{location.name}</p></Link><p className="location"> - {location.city}, {location.state}</p>
             <p className="price">Ticket Price: ${price}</p>
-            {user ? <button id='buy-button' onClick={(e) => handleBuy(e)}>Buy Ticket</button> : <button id='cannot-buy-button'>Log in to Buy a Ticket!</button>}
+            {user ? <button id='buy-button' onClick={(e) => handleBuy(e)}>Buy Ticket</button> : <Link to='/Login'><button id='cannot-buy-button'>Log in or Sign up to buy tickets!</button></Link>}
         </div>
     )
 }

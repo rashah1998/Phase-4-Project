@@ -1,14 +1,16 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import {useEffect, useState} from "react"
 import '../App.css';
 import Nav from "./Nav"
 import Home from "./Home"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Locations from "./Locations"
 import Login from "./Login"
 import Comedians from "./Comedians"
 import Shows from "./Shows"
 import ComedianPage from './ComedianPage';
-import {useEffect, useState} from "react"
 import LocationPage from './LocationPage';
+import SignUp from "./SignUp";
+import Tickets from "./Tickets";
 
 function App() {
  
@@ -65,8 +67,14 @@ function App() {
         <Route path="/Comedians/:id">
           <ComedianPage />
         </Route>
+        <Route path="/Tickets">
+          <Tickets />
+        </Route>
         <Route path="/Login">
           <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} user={user}/>
+        </Route>
+        <Route path="/Signup">
+          <SignUp />
         </Route>
       </Switch>
       <div id='footer'>

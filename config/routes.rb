@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
+  get '/users/:id', to: 'users#show_tickets'
+
   resources :tickets
   resources :shows
   resources :locations
   resources :comedians
-  resources :users
+  resources :users, only: [:create]
 
   get '/authorized_user', to: 'users#show'
 

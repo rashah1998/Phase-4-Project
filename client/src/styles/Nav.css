@@ -1,5 +1,5 @@
 nav {
-    height: 50px;
+    height: 7vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr) 10fr;
     align-items: center;
@@ -23,11 +23,21 @@ nav {
 
 #login {
     justify-self: end;
-    margin-right: 10%;
+    /* margin-right: 10%; */
 }
 
 #logged-in {
     justify-self: end;
-    width: 290px;
+    margin-right: 10%;
+}
+
+#or {
+    display: inline;
+    color: white;
+    font-size: 20px;
+}
+
+#logged-out {
+    justify-self: end;
     margin-right: 10%;
 }

@@ -1,0 +1,13 @@
+#login-box {
+    height:80.7vh;
+    color: white;
+}
+
+#login-to-signup-link {
+    text-decoration: underline;
+    color:white;
+}
+
+#submit-login {
+    margin: 20px;
+}
