@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :shows
   resources :locations
   resources :comedians
-  resources :users, only: [:create]
+  resources :users, only: [:create, :update]
 
   get '/authorized_user', to: 'users#show'
 

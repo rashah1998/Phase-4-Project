@@ -1,0 +1,36 @@
+.ticket-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: solid 1px white;
+    margin: 5px 400px 20px 400px;
+}
+
+.ticket-buy-button {
+    display: block;
+    padding: 12px 16px;
+    background-color: rgb(80, 0, 80);
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:0.4 ;
+}
+.ticket-buy-button:hover {
+    background-color: rgb(161, 20, 114);
+    cursor: pointer;
+}
+
+.ticket-refund-button {
+    display: block;
+    padding: 12px 16px;
+    background-color: rgb(80, 0, 80);
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:0.4 ;
+}
+.ticket-refund-button:hover {
+    background-color: rgb(161, 20, 114);
+    cursor: pointer;
+}

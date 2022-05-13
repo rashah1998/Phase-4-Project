@@ -26,7 +26,7 @@ return (
             </Link>
             {user ?
             <div id='logged-in'> 
-                <span id='welcome'>Welcome, {user.first_name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span id='welcome'><Link to= '/Profile' className="nav-link" id="profile-link">Welcome, {user.first_name}</Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <Link to= '/Tickets'className="nav-link" id="my-tickets">
                     <span>My Tickets</span>
                 </Link>

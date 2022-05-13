@@ -11,6 +11,7 @@ import ComedianPage from './ComedianPage';
 import LocationPage from './LocationPage';
 import SignUp from "./SignUp";
 import Tickets from "./Tickets";
+import Profile from "./Profile";
 
 function App() {
  
@@ -68,13 +69,16 @@ function App() {
           <ComedianPage />
         </Route>
         <Route path="/Tickets">
-          <Tickets />
+          <Tickets user={user}/>
         </Route>
         <Route path="/Login">
           <Login setUser={setUser} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} user={user}/>
         </Route>
         <Route path="/Signup">
           <SignUp />
+        </Route>
+        <Route path="/Profile">
+          <Profile user={user} setUser={setUser}/>
         </Route>
       </Switch>
       <div id='footer'>

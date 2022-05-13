@@ -48,7 +48,7 @@ function Login({setUser, setIsAuthenticated, isAuthenticated, user}){
                         <p>Password</p>
                         <input type="password" id="password-login" placeholder="Enter Password" onChange={e => setPassword(e.target.value)} required></input>
                         <br></br>
-                        <input type="submit" id="submit-login" value="Login"></input>
+                        <input type="submit" id="submit-login" value="Log In"></input>
                         <br/>
                         {error ? <p>{error}</p> : null}
                         {user ? <p>Login successful! Welcome, {user.first_name}</p> : null}

@@ -60,7 +60,7 @@ function SignUp() {
                         <p>Re-enter Password</p>
                         <input type="password" id="password-signup" placeholder="Enter Password" onChange={e => setConfirmPassword(e.target.value)} required></input>
                         <br></br>
-                        <input type="submit" id="submit-signup" value="Login"></input>
+                        <input type="submit" id="submit-signup" value="Sign Up"></input>
                         <br/>
                         {error ? <p>{error}</p> : null}
                     </div>
