@@ -14,14 +14,14 @@ function ComedianPage() {
         .then(comedianData => {setComedian(comedianData)
             setComedianShows(comedianData.shows)
         })
-    }, [])
+    }, [id])
 
     const renderShows = comedianShows.map(show => <ComedianPageShow key={show.id} show={show}/>)
 
     return(
         <div className='background'>
             <div className='comedian-page'>
-                <img src={comedian.image_url} ></img>
+                <img src={comedian.image_url} alt={`${comedian.name}`}></img>
                 <h1>{comedian.name}</h1>
                 <p>{comedian.about_info}</p>
                 <a href={comedian.website_url}>{comedian.name}'s Website</a>

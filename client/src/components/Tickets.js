@@ -9,7 +9,7 @@ function Tickets({user}){
         fetch(`/users/${user.id}`)
         .then(res => res.json())
         .then(showData => setShows(showData))
-    },[])
+    },[user])
 
     const counts = {};
     for (const show of shows) {

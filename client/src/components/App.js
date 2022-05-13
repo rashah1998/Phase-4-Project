@@ -78,7 +78,7 @@ function App() {
           <SignUp />
         </Route>
         <Route path="/Profile">
-          <Profile user={user} setUser={setUser}/>
+          <Profile user={user} setUser={setUser} setIsAuthenticated={setIsAuthenticated}/>
         </Route>
       </Switch>
       <div id='footer'>

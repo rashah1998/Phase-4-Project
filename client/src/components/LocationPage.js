@@ -14,7 +14,7 @@ function LocationPage() {
         .then(locationData => {setLocation(locationData)
             setLocationShows(locationData.shows)
         })
-    }, [])
+    }, [id])
 
     const renderShows = locationShows.map(show => <LocationPageShow key={show.id} show={show}/>)
 
@@ -23,9 +23,10 @@ function LocationPage() {
     return(
         <div className='what'>
             <div className='location-page'>
-                <img src={location.image_url} ></img>
+                <img src={location.image_url} alt={location.name}></img>
                 <h1>{location.name}</h1>
                 <p>{location.city}, {location.state}</p>
+                <p>Number of Seats: {location.number_of_seats}</p>
                 <br></br>
                 <a href={location.website_url}>{location.name}'s Website</a>
             </div>

@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "../styles/Shows.css"
 import ShowItem from "./ShowItem"
 
@@ -15,9 +14,8 @@ function Shows({shows, user}) {
                     </a>
                 </div>
             </div>
-
+            <h2 id="showTitle">Shows</h2>
             <div className="shows-wrapper">
-                <h2 id="showTitle">Shows</h2>
                 {renderShows}
             </div>
 

@@ -1,7 +1,9 @@
 import {useState} from 'react'
+import { useHistory } from 'react-router-dom'
 import '../styles/Profile.css'
 
-function Profile({user, setUser}) {
+function Profile({user, setUser, setIsAuthenticated}) {
+    const history = useHistory()
     const [editing, setEditing] = useState(false)
     const [error, setError] = useState(null)
     const [editProfileParams, setEditProfileParams] = useState({
@@ -10,7 +12,7 @@ function Profile({user, setUser}) {
         username: user.username
     })
 
-    function handleClick() {
+    function handleEditToggle() {
         setEditing(true)
     }
 
@@ -38,12 +40,25 @@ function Profile({user, setUser}) {
         })
     }
 
+    function handleDelete() {
+        const userConfirmation = window.confirm("This action is permanent. Are you sure you want to delete your profile?")
+        if(userConfirmation) {
+            fetch(`/users/${user.id}`, {
+                method: 'DELETE'
+            }).then(() => {
+                history.push('/')
+                setUser(null)
+                setIsAuthenticated(false) 
+            })
+        }
+    }
+
     const userData = (
         <div>
             <h1>{user.first_name}'s Profile:</h1>
             <h3>Name: {user.first_name} {user.last_name}</h3>
             <h3>Username: {user.username}</h3>
-            <button onClick={handleClick}>Edit Profile</button>
+            <button onClick={handleEditToggle}>Edit Profile</button>
         </div>
     )
 
@@ -62,6 +77,7 @@ function Profile({user, setUser}) {
     return(
         <div id='user-data'>
             {editing ? editUserData : userData}
+            <button onClick={handleDelete}>Delete User</button>
         </div>
     )
 }
