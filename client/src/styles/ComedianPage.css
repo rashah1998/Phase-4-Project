@@ -11,7 +11,7 @@
 }
 
 .comedian-page > p {
-    margin-left: 210px;
+    margin-left: 350px;
     color: white
 }
 .comedian-page > h1 {
@@ -24,9 +24,6 @@
     color:white
 }
 
-.upcoming-show{
-    /* padding-bottom: 10%; */
-}
 .render-show{
     color: white;
     text-align: left;

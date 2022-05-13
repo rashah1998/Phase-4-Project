@@ -32,7 +32,7 @@ function SignUp() {
                 if(res.ok) {
                     res.json()
                     .then(() => {
-                        history.push("/")
+                        history.push("/Login")
                         e.target.reset()
                     })
                 } else {
